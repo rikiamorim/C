@@ -1,0 +1,114 @@
+#include <stdio.h>
+
+int main() {
+    //variaveis para o switch case
+    int principal = 0;
+    int bebida = 0;
+    int sobremesa = 0;
+    
+    //variaveis para o preço
+    
+    // main dish
+    float churrasco = 50.99;
+    float lanche = 30.50;
+    float macarrao = 45.67;
+    
+    //Beverage
+    float coca = 10.61;
+    float fanta = 9.74;
+    float suco = 12.92;
+    
+    //dessert
+    float pudim = 20.99;
+    float brigadeiro = 5.15;
+    float bolo = 10.68;
+    
+    
+    float total = 0;
+    //escolha do prato principal
+ 
+    printf("\n[1] Churrasco - R$%.2f", churrasco);
+    printf("\n[2] Lanche - R$%.2f", lanche);
+    printf("\n[3] Macarrão - R$%.2f", macarrao);    
+    printf("\nDigite uma opção de prato principal : ");
+
+    scanf("%d", &principal);
+    
+    switch(principal) {
+        case 1:
+            total += churrasco;
+            printf("\nVoce escolheu churrasco!");
+            break;
+        case 2:
+             total += lanche;
+            printf("\nVoce escolheu lanche!");
+            break;
+        case 3:
+             total += macarrao;
+            printf("\nVoce escolheu macarrão!");
+            break;
+        default:
+           printf("Opção inválida");
+            return 1;
+    }
+    
+    //escolha da bebida
+    
+    printf("\n\n[1] Coca - R$%.2f", coca);
+    printf("\n[2] Fanta - R$%.2f", fanta);
+    printf("\n[3] Suco - R$%.2f", suco);
+    printf("\nDigite uma opção de bebida : ");
+
+    scanf("%d", &bebida);
+    
+    switch(bebida) {
+        case 1:
+             total += coca;
+            printf("\nVoce escolheu coca!");
+            break;
+        case 2:
+             total += fanta;
+            printf("\nVoce escolheu fanta!");
+            break;
+        case 3:
+             total += suco;
+            printf("\nVoce escolheu suco!");
+            break;
+        default:
+           printf("Opção inválida");
+            return 1;
+    }
+
+    //escolha da sobremesa
+
+    printf("\n\n[1] Pudim - R$%.2f", pudim);
+    printf("\n[2] Brigadeiro - R$%.2f", brigadeiro);
+    printf("\n[3] Bolo - R$%.2f", bolo);
+    printf("\nDigite uma opção de sobremesa : ");
+
+    scanf("%d", &sobremesa);
+    
+    switch(sobremesa) {
+        case 1:
+             total += pudim;        
+            printf("\nVoce escolheu o poderoso PUDIM!");
+            break;
+        case 2:
+             total += brigadeiro;        
+            printf("\nVoce escolheu brigadeiro!");
+            break;
+        case 3:
+             total += bolo;        
+            printf("\nVoce escolheu bolo!");
+            break;
+        default:
+           printf("Opção inválida");
+            return 1;
+    }
+    
+   printf("\n\nO total da sua refeição é de : %.2f", total);
+    
+    
+    
+    return 0;
+}
