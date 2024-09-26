@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    
+   int prod = -1;
+   float total = 0;
+   
+   while(prod != 0) {
+       printf("Digite o valor do produto : ");
+       scanf("%d", &prod);
+       total += prod;
+   }
+
+printf("\no valor total é %.2f", total);
+
+    return 0;
+}
