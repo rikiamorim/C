@@ -1,0 +1,80 @@
+#include <stdio.h>
+
+int main() {
+        int op = 0;
+        int o1 = 0;
+        int o2 = 0;
+        int o3 = 0;
+        int o4 = 0;
+        int o5 = 0;
+        int total = 0;
+        float nulos;
+        float brancos;
+
+printf("\nBem vindo as eleições!\n");
+printf("\nAs opções são:");
+printf("\n1. Candidato Jair Rodrigues"); //o1
+printf("\n2. Candidato Carlos Luz"); //o2
+printf("\n3. Candidato Neves Rocha"); //o3
+printf("\n4. Nulo"); //o4
+printf("\n5. Branco\n\n"); //o5
+
+do {
+        printf("Entre com o seu voto : ");
+        scanf("%d", &op);
+
+    switch(op) {
+        case 1:
+            o1++;
+            total++;
+            break;
+        case 2:
+            o2++;
+            total++;
+            break;
+        case 3:
+            o3++;
+            total++;
+            break;
+        case 4:
+            o4++;
+            total++;
+            break;
+        case 5:
+            o5++;
+            total++;
+            break;
+        case 6:
+            printf("\nCandidato Jair Rodrigues %d votos", o1); //o1
+            printf("\nCandidato Carlos Luz %d votos", o2); //o2
+            printf("\nCandidato Neves Rocha %d votos", o3); //o3
+            printf("\nVotos Nulos %d", o4); //o4
+            printf("\nVotos em branco %d", o5); //o5            
+            nulos = ((float)o4 / (float)total) * 100;
+            
+            printf("\n\nPorcentagem de votos nulos é : %.2f%%", nulos);
+            
+           brancos = ((float)o5 / (float)total) * 100;
+            
+            printf("\nPorcentagem de votos em branco é : %.2f%%", brancos);     
+            
+            if (o1 > o2 && o1 > o3) {
+                printf("\n\nO Candidato Jair Rodrigues é o vencedor");
+            } else if (o2 > o1 && o2 > o3) {
+                printf("\n\nO Candidato Carlos Luz é o vencedor");
+            } else if (o3 > o1 && o3 > o2) {
+                printf("\n\nO Candidato Neves Rocha é o vencedor");
+            } else {
+                printf("\n\nEmpate, vamos para o segundo turno");
+            }
+            
+            break;
+        default:
+            printf("\nVoto inválido, insira um valor entre 1 e 5");
+            break;
+    }
+} while (op != 6);
+
+
+    return 0;
+}
