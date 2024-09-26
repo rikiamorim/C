@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+#define produtos 3
+
+float valor[produtos];
+
+int main() {
+    float soma = 0;
+
+    for(int i = 0; i < produtos; i++) {
+        printf("Digite o valor do produto %d: ", i + 1);
+        scanf("%f", &valor[i]);
+    }
+    
+    for(int i = 0; i < produtos; i++) {
+        soma += valor[i]; 
+    }
+    
+    printf("\nO total é %.2f!\n", soma); 
+
+    return 0;
+}
