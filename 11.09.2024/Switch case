@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int op = 0;
+    
+    printf("Digite uma opção : ");
+    scanf("%d", &op);
+    
+    switch(op) {
+        case 1:
+            printf("Voce escolheu a opção 1");
+            break;
+        case 2:
+            printf("Voce escolheu a opção 2");
+            break;
+        default:
+            printf("Opção inválida");
+            break;
+        
+    }
+       
+    
+    return 0;
+}
