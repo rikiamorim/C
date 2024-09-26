@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+
+    int idade;
+    float anos;
+    char genero;
+    char nome[10];
+
+    printf("Digite seu nome: ");
+    scanf("%9s", nome);
+
+    printf("Especifique seu gênero entre M ou F: ");
+    scanf(" %c", &genero);
+
+    printf("Insira sua idade: ");
+    scanf("%d", &idade);
+
+    printf("Insira quantos anos de serviço prestado você tem: ");
+    scanf("%f", &anos);
+
+    if (genero == 'M' || genero == 'm') {
+        if ((idade >= 65 && anos >= 40) || idade >= 80) {
+            printf("Parabéns %s, você pode se aposentar\n", nome);
+        } else {
+            printf("Infelizmente você não poderá se aposentar no momento\n");
+        }
+    } else if (genero == 'F' || genero == 'f') {
+        if ((idade >= 65 && anos >= 35) || idade >= 80) {
+            printf("Parabéns %s, você pode se aposentar\n", nome);
+        } else {
+            printf("Infelizmente você não poderá se aposentar no momento\n");
+        }
+    } else {
+        printf("Gênero inválido. Use M para masculino ou F para feminino.\n");
+    }
+
+    return 0;
+}
