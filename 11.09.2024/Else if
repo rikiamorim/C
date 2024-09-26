@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h> 
+
+int main() {
+
+char Login1[6] = "Aluno";
+char Senha1[4] = "123";
+
+char login2[6];
+char senha2[4];
+
+    printf("Digite seu login : ");
+    scanf("%s", login2);
+    
+    printf("\nDigite sua senha : ");
+    scanf("%s", senha2);
+    
+    if (strcmp(Senha1, senha2) == 0 && strcmp(Login1, login2) == 0) {
+        printf("Bem-vindo, Aluno!\n");
+    } else if (strcmp(Senha1, senha2) != 0 && strcmp(Login1, login2) == 0) {
+        printf("Senha incorreta!");
+    } else if (strcmp(Senha1, senha2) == 0 && strcmp(Login1, login2) != 0) {
+        printf("Login incorreto!");
+    } else {
+        printf("Login ou senha incorretos!");
+    }
+    
+    
+    
+    return 0;
+}
