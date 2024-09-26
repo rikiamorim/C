@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    
+    float valor;
+    float soma = 0;
+    int qtd = 0;
+
+    while (1) {
+        printf("Digite um número: ");
+        scanf("%f", &valor);
+        
+        if (valor == 0) {
+            break; 
+        }
+
+        soma += valor;
+        qtd++; 
+    }
+
+    float media = 0;
+    if (qtd > 0) {
+        media = soma / qtd;
+    }
+
+    printf("Foram inseridos %d números e a média entre eles é: %.2f\n", qtd, media);
+
+    return 0;
+}
