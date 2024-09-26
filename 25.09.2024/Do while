@@ -10,14 +10,19 @@ int qtd = 0;
         printf("Digite o valor do produto: ");
         scanf("%f", &valor);
         
+
         soma += valor;
         qtd++;
         
     } while (valor != 0);
     
-    qtd--;
+    qtd --;
     
+    if (valor == 0 && soma == 0) {
+        printf("Carrinho vazio!");
+        } else { 
     printf("Você adicionou %d itens no valor total de R$%.2f", qtd, soma);
-    
+        }
+        
     return 0;
 }
