@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int main() {
+
+// nomes do alunos
+    char aluno1[10];
+    char aluno2[10];
+    char aluno3[10];
+    
+// notas aluno 1
+    float a11;
+    float a12;
+
+//notas aluno 2
+    float a21;
+    float a22;
+
+//notas aluno 3
+    float a31;
+    float a32;
+
+//Primeiro aluno
+    printf("Digite o nome do primeiro aluno : ");
+    scanf("%s", aluno1);
+    printf("Digite a primeira nota do(a) %s : ", aluno1);
+    scanf("%f", &a11);
+    printf("Digite a Segunda nota do(a) %s : ", aluno1);
+    scanf("%f", &a12);
+    
+//Segundo aluno
+    printf("\nDigite o nome do segundo aluno : ");
+    scanf("%s", aluno2);
+    printf("Digite a primeira nota do(a) %s : ", aluno2);
+    scanf("%f", &a21);
+    printf("Digite a Segunda nota do(a) %s : ", aluno2);
+    scanf("%f", &a22);
+    
+//Terceiro aluno
+    printf("\nDigite o nome do terceiro aluno : ");
+    scanf("%s", aluno3);
+    printf("Digite a primeira nota do(a) %s : ", aluno3);
+    scanf("%f", &a31);
+    printf("Digite a Segunda nota do(a) %s : ", aluno3);
+    scanf("%f", &a32);
+    
+//Calculo das medias
+    float media1 = (a11 + a12) / 2;
+    float media2 = (a21 + a22) / 2;
+    float media3 = (a31 + a32) / 2;
+    
+//Resultados    
+
+    printf("\nA média do(a) %s é : %.2f", aluno1, media1);
+    printf("\nA média do(a) %s é : %.2f", aluno2, media2);
+    printf("\nA média do(a) %s é : %.2f", aluno3, media3);
+
+
+    return 0;
+}
